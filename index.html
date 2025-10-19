@@ -7,24 +7,89 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <header>
-    <h1>Hakma Consulting</h1>
+  <header class="site-header">
+    <div class="logo-container">
+      <img src="images/hakma-logo.png" alt="Hakma Brand Logo" class="logo"/>
+      <h1>Hakma Consulting</h1>
+    </div>
     <nav>
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="#about">About</a>
+      <a href="#offerings">Offerings</a>
+      <a href="#values">Values</a>
+      <a href="#contact">Contact</a>
     </nav>
   </header>
 
   <main>
-    <section id="home">
-      <h2>Welcome to Hakma Brand Consulting</h2>
-      <p>Brand Marketing Communications & Customer Experience</p>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+      <img src="images/hero-image.jpg" alt="Brand Strategy" class="hero-image"/>
+      <div class="hero-text">
+        <h2>Building Brands that Connect & Inspire</h2>
+        <p>Brand Marketing • Communications • Customer Experience</p>
+      </div>
+    </section>
+
+    <!-- Offerings Section -->
+    <section id="offerings" class="offerings">
+      <h2>Our Offerings</h2>
+      <div class="offer-grid">
+        <div class="offer-item">
+          <img src="images/strategy-icon.png" alt="Strategy Icon">
+          <h3>Brand Strategy</h3>
+          <p>We help you define a clear, compelling brand identity that resonates with your audience.</p>
+        </div>
+        <div class="offer-item">
+          <img src="images/marketing-icon.png" alt="Marketing Icon">
+          <h3>Marketing Communications</h3>
+          <p>Crafting meaningful messages and visuals that elevate your brand across all touchpoints.</p>
+        </div>
+        <div class="offer-item">
+          <img src="images/experience-icon.png" alt="Experience Icon">
+          <h3>Customer Experience</h3>
+          <p>Designing seamless and memorable experiences that foster loyalty and growth.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Values Section -->
+    <section id="values" class="values">
+      <h2>Our Core Values</h2>
+      <div class="values-grid">
+        <div class="value-item">
+          <img src="images/integrity-icon.png" alt="Integrity Icon">
+          <h3>Integrity</h3>
+          <p>We believe in transparency and ethical collaboration with every client.</p>
+        </div>
+        <div class="value-item">
+          <img src="images/creativity-icon.png" alt="Creativity Icon">
+          <h3>Creativity</h3>
+          <p>Innovation drives our approach to solving brand challenges.</p>
+        </div>
+        <div class="value-item">
+          <img src="images/excellence-icon.png" alt="Excellence Icon">
+          <h3>Excellence</h3>
+          <p>We deliver work that meets the highest standards of quality and impact.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- About the Chief Consultant -->
+    <section id="about" class="about">
+      <h2>About the Chief Consultant</h2>
+      <div class="about-content">
+        <img src="images/chief-consultant.jpg" alt="Chief Consultant Portrait" class="about-image"/>
+        <div class="about-text">
+          <h3>Dr. Hana Kamal</h3>
+          <p>Dr. Hana Kamal is the founder and Chief Consultant of Hakma Brand Consulting. With over 15 years of experience in marketing strategy and communications, she has helped leading organizations build authentic brands that connect deeply with their customers.</p>
+          <p>Her expertise lies in integrating psychology, design, and storytelling to create meaningful brand experiences that drive business success.</p>
+        </div>
+      </div>
     </section>
   </main>
 
-  <footer>
+  <footer id="contact">
     <p>&copy; 2025 Hakma Brand Consulting. All rights reserved.</p>
   </footer>
 

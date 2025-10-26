@@ -185,6 +185,78 @@ nav a:hover::after {
   }
 }
 
+.mission-section {
+  background-color: #2b2012; /* dark black-beige for premium feel */
+  padding: 8rem 5%;
+  text-align: center;
+  position: relative;
+}
+
+.mission-section h2 {
+  font-family: 'Playfair Display', serif;
+  font-size: 3rem; /* bigger text */
+  font-weight: 700;
+  color: #e8e2d8; /* very light beige heading */
+  margin-bottom: 2rem;
+  position: relative;
+  display: inline-block;
+}
+
+/* Decorative line under heading */
+.mission-section h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #ffffff; /* white line for contrast */
+  margin: 0.5rem auto 0 auto;
+  border-radius: 2px;
+}
+
+.mission-section p {
+  font-family: 'Lato', sans-serif;
+  font-size: 1.8rem; /* bigger paragraph */
+  font-style: italic;
+  color: #ffffff; /* white text */
+  line-height: 1.8;
+  max-width: 1000px; /* limits line length for readability */
+  margin: 0 auto; /* centers paragraph */
+  letter-spacing: 0.5px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .mission-section h2 {
+    font-size: 2.5rem;
+  }
+
+  .mission-section p {
+    font-size: 1.5rem;
+    line-height: 1.6;
+    padding: 0 1rem;
+  }
+
+  .mission-section h2::after {
+    width: 60px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mission-section h2 {
+    font-size: 2rem;
+  }
+
+  .mission-section p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+
+  .mission-section h2::after {
+    width: 40px;
+  }
+}
+
+
 /* === ABOUT SECTION (White Background, Text Left, Image Right, Black Font) === */
 .about-section {
   background-color: #ffffff; /* clean white background */

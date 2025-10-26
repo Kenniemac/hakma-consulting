@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="brand-section">
       <img src="images/hakmalogo.png" alt="Hakma Brand Logo" class="logo"/>
@@ -15,28 +17,41 @@
         <span class="brand-line2">Consulting</span>
       </div>
     </div>
-  
+
     <nav id="navbar">
       <a href="#home">Home</a>
       <a href="#about">About</a>
       <a href="#offerings">What we do</a>
       <a href="#values">Blog</a>
       <a href="#contact">Get in touch</a>
-      <a href="#contact">Projects</a>
+      <a href="#projects">Projects</a>
     </nav>
-  
+
     <div class="menu-toggle" id="menu-toggle">☰</div>
   </header>
 
-  <main>
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-      <img src="images/backgroundimg.png" alt="Brand Strategy" class="hero-image"/>
-      <div class="hero-text">
-        <h2>Building Brands that Connect & Inspire</h2>
-        <p>Brand Marketing • Communications • Customer Experience</p>
-      </div>
-    </section>
+  <!-- HERO SECTION -->
+  <section id="home" class="hero">
+    <img src="images/backgroundimg.png" alt="Brand Strategy" class="hero-image"/>
+    <div class="hero-text">
+      <h2>Building Brands that Connect & Inspire</h2>
+      <p>Brand Marketing • Communications • Customer Experience</p>
+    </div>
+  </section>
+
+  <!-- JS for Mobile Menu -->
+  <script>
+    const menuToggle = document.getElementById('menu-toggle');
+    const navbar = document.getElementById('navbar');
+
+    menuToggle.addEventListener('click', () => {
+      navbar.classList.toggle('active');
+    });
+  </script>
+
+</body>
+</html>
+
 
     <!-- About Us Section -->
     <section id="about" class="about-section">

@@ -449,9 +449,10 @@ nav a:hover::after {
 /* Offerings Grid Layout */
 .offerings-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* 4 per row on large screens */
-  gap: 1.2rem;
+  grid-template-columns: repeat(3, 1fr); /* 3 per row on desktop */
+  gap: 1.5rem;
   margin-top: 3rem;
+  justify-items: center;
 }
 
 /* Each Offering Rectangle */
@@ -461,16 +462,17 @@ nav a:hover::after {
   color: #000;
   font-family: 'Lato', sans-serif;
   font-weight: 600;
-  font-size: 0.95rem;
-  text-transform: none;
-  padding: 1.5rem 0.8rem;
+  font-size: 1rem;
+  padding: 1.8rem 1rem;
   border-radius: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
   transition: all 0.3s ease;
   cursor: pointer;
-  height: 100px; /* smaller uniform height */
+  height: 110px;
+  width: 100%;
+  max-width: 300px;
 }
 
 /* Hover effect */
@@ -493,10 +495,11 @@ nav a:hover::after {
     grid-template-columns: 1fr;
   }
   .offering-item {
-    height: 90px;
-    font-size: 0.9rem;
+    height: 95px;
+    font-size: 0.95rem;
   }
 }
+
 
 .contact-section {
   background-color: #fff;
@@ -637,6 +640,92 @@ nav a:hover::after {
   margin: 0.5rem auto 0 auto; /* spacing below heading */
   border-radius: 2px;
 }
+
+/* ===============================================
+   CONTACT FORM SECTION
+   =============================================== */
+
+.contact-form-section {
+  background: #ffffff;
+  padding: 5rem 8%;
+  display: flex;
+  justify-content: center;
+}
+
+.contact-form-wrapper {
+  background: #f8f5ef;
+  padding: 3rem;
+  border-radius: 14px;
+  max-width: 650px;
+  width: 100%;
+  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+}
+
+.form-title {
+  font-family: 'Playfair Display', serif;
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 0.4rem;
+  color: #2a1f12;
+}
+
+.form-subtext {
+  text-align: center;
+  color: #555;
+  margin-bottom: 2rem;
+  font-family: 'Lato', sans-serif;
+}
+
+.form-group {
+  margin-bottom: 1.4rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-weight: 600;
+  color: #2a1f12;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 8px;
+  border: 1.5px solid #cfc3ae;
+  font-family: 'Lato', sans-serif;
+  font-size: 1rem;
+  background: #fff;
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background: #2a1f12;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.submit-btn:hover {
+  background: #4a3822;
+}
+
+/* Mobile Friendly */
+@media (max-width: 600px) {
+  .contact-form-wrapper {
+    padding: 2rem;
+  }
+
+  .form-title {
+    font-size: 1.8rem;
+  }
+}
+
 
 
 /* === Smooth Scrolling for Navigation Links === */

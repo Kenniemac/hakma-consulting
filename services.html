@@ -4,138 +4,137 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Hakma Brand Consulting — Services</title>
+
   <link rel="stylesheet" href="style.css" />
 </head>
-<body>
-  <header>
-    <h1>Hakma Brand Consulting</h1>
-    <nav>
+
+<body class="services-page">
+
+  <!-- HEADER / NAVBAR -->
+<header class="site-header">
+  <div class="header-container">
+
+    <!-- LOGO (LEFT) -->
+    <div class="logo">
+        <img src="images/Hakma.png" alt="Hakma Brand Consulting Logo">
+    </div>
+
+    <!-- NAVIGATION (CENTER) -->
+    <nav id="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html" class="active">Our Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html">Get in touch</a>
+      <a href="projects.html">Projects</a>
     </nav>
-  </header>
+
+  </div>
+</header>
 
   <main>
-    <section id="services">
-      <h2>Our Services</h2>
-      <ul>
-        <li>Business Strategy & Positioning</li>
-        <li>Brand Plan Development</li>
-        <li>Customer Journey Mapping</li>
-        <li>Customer Engagement Framework</li>
-        <li>Personal Branding</li>
-        <li>PR Strategy</li>
-        <li>Product Marketing</li>
-        <li>Customer Experience</li>
-      </ul>
+
+    <!-- HERO -->
+    <section class="services-hero">
+      <h1>Our Services</h1>
+      <p>Driving impactful results for you and your business.</p>
     </section>
+
+    <!-- TABS -->
+    <div class="services-tabs">
+      <button class="tab active" data-target="brand">Brand Strategy</button>
+      <button class="tab" data-target="comms">Communications</button>
+      <button class="tab" data-target="personal">Personal Brand</button>
+      <button class="tab" data-target="pr">PR Strategy</button>
+      <button class="tab" data-target="gtm">Go-To-Market</button>
+      <button class="tab" data-target="engagement">Customer Engagement</button>
+      <button class="tab" data-target="cx">Customer Experience</button>
+      <button class="tab" data-target="media">Media & Advertising</button>
+    </div>
+
+    <!-- CONTENT -->
+    <div class="services-content">
+
+      <div class="service-card active" id="brand">
+        <h3>Brand Strategy & Positioning</h3>
+        <p><strong>Strategy. Tools. Messaging.</strong></p>
+        <p>We create a strategic roadmap for brand growth, market entry, or rebranding.</p>
+        <p>We help your business define, strengthen, and grow your brand identity...</p>
+      </div>
+
+      <div class="service-card" id="comms">
+        <h3>Communications Strategy</h3>
+        <p><strong>Say the right things, to the right people, in the right way</strong></p>
+        <p>We help you communicate with clarity and impact.</p>
+      </div>
+
+      <div class="service-card" id="personal">
+        <h3>Personal Brand Building / Executive Profiling</h3>
+        <p><strong>Your voice. Your presence. Your power.</strong></p>
+      </div>
+
+      <div class="service-card" id="pr">
+        <h3>Public Relations Strategy</h3>
+        <p><strong>Be seen. Be respected. Be unforgettable.</strong></p>
+      </div>
+
+      <div class="service-card" id="gtm">
+        <h3>Go-To-Market Strategy</h3>
+        <p><strong>Enter with clarity. Scale with confidence.</strong></p>
+      </div>
+
+      <div class="service-card" id="engagement">
+        <h3>Customer Engagement Strategy</h3>
+        <p><strong>Engage and retain customers</strong></p>
+      </div>
+
+      <div class="service-card" id="cx">
+        <h3>Customer Experience Strategy</h3>
+        <p><strong>Drive loyalty and growth</strong></p>
+      </div>
+
+      <div class="service-card" id="media">
+        <h3>Media & Advertising</h3>
+        <p><strong>Visibility placed with intent</strong></p>
+      </div>
+
+    </div>
+
+
+
   </main>
 
-  /* Contact Section */
-  .contact-section {
-    background-color: #ffffff;
-    padding: 6rem 8%;
-    scroll-margin-top: 80px; /* prevents nav overlap when linked */
-  }
-  
-  .contact-container {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  /* Founder Image */
-  .contact-image img {
-    width: 260px;
-    height: 300px;
-    object-fit: cover;
-    border-radius: 16px;
-    box-shadow: 0 6px 25px rgba(0,0,0,0.08);
-    border: 2px solid #e3d7c0;
-  }
-  
-  /* Contact Details */
-  .contact-details {
-    flex: 1;
-    min-width: 300px;
-    color: #1a1a1a;
-  }
-  
-  .contact-details h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-  }
-  
-  .contact-details .intro-text {
-    font-family: 'Lato', sans-serif;
-    font-size: 1.05rem;
-    color: #333;
-    line-height: 1.7;
-    margin-bottom: 2rem;
-  }
-  
-  /* Contact Info Lines */
-  .contact-info p {
-    font-family: 'Lato', sans-serif;
-    font-size: 1rem;
-    line-height: 1.8;
-    margin-bottom: 0.5rem;
-  }
-  
-  .contact-info strong {
-    color: #000;
-  }
-  
-  .contact-info a {
-    color: #000;
-    text-decoration: none;
-    border-bottom: 1px solid #b79b63;
-    transition: all 0.3s ease;
-  }
-  
-  .contact-info a:hover {
-    color: #b79b63;
-    border-color: #b79b63;
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 900px) {
-    .contact-container {
-      flex-direction: column;
-      text-align: center;
-    }
-  
-    .contact-image img {
-      width: 200px;
-      height: 240px;
-    }
-  
-    .contact-details h2 {
-      font-size: 2rem;
-    }
-  
-    .contact-details .intro-text {
-      font-size: 1rem;
-      margin-bottom: 1.5rem;
-    }
-  
-    .contact-info p {
-      font-size: 0.95rem;
-    }
-  }
-  
+  <!-- JAVASCRIPT -->
+  <script>
+    const tabs = document.querySelectorAll(".tab");
+    const cards = document.querySelectorAll(".service-card");
 
-  <footer>
-    <p>&copy; 2025 Hakma Brand Consulting. All rights reserved.</p>
-  </footer>
+    function activateTab(targetId) {
+      tabs.forEach(t => t.classList.remove("active"));
+      cards.forEach(c => c.classList.remove("active"));
 
-  <script src="script.js"></script>
+      const selectedTab = document.querySelector(`[data-target="${targetId}"]`);
+      const selectedCard = document.getElementById(targetId);
+
+      if (selectedTab && selectedCard) {
+        selectedTab.classList.add("active");
+        selectedCard.classList.add("active");
+      }
+    }
+
+    tabs.forEach(tab => {
+      tab.addEventListener("click", () => {
+        const target = tab.getAttribute("data-target");
+        activateTab(target);
+        window.location.hash = target;
+      });
+    });
+
+    window.addEventListener("load", () => {
+      const hash = window.location.hash.replace("#", "");
+      if (hash) activateTab(hash);
+    });
+  </script>
+
 </body>
 </html>

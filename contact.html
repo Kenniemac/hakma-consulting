@@ -9,23 +9,49 @@
 <body>
   <header>
     <h1>Hakma Brand Consulting</h1>
-    <nav>
+    <nav id="navbar">
       <a href="index.html">Home</a>
-      <a href="about.html">About</a>
-      <a href="services.html">Services</a>
-      <a href="contact.html">Contact</a>
+      <a href="about.html">About Us</a>
+      <a href="services.html">Our Services</a>
+      <a href="blog.html">Blog</a>
+      <a href="contact.html" class="active">Get in touch</a>
+      <a href="projects.html">Projects</a>
     </nav>
   </header>
 
   <main>
     <section id="contact">
       <h2>Contact Us</h2>
-      <p>Email: hakmaconsulting@gmail.com</p>
+      <p>Email: hakmaconsulting@gmail.com; lolamakinde01@gmail.com</p>
       <p>Phone: +234 703 899 8513</p>
       <p>Address: Ikoyi Lagos</p>
       <p>Instagram: @hakmaconsulting</p>
     </section>
   </main>
+
+
+    <main>
+    <section class="contact-section">
+      <h2>Get in Touch</h2>
+      <form action="https://formsubmit.co/omolola@hakmaconsulting.com" method="POST">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_next" value="https://hakmaconsulting.com/thankyou.html">
+
+        <label for="name">Full Name</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
 
   <footer>
     <p>&copy; 2025 Hakma Brand Consulting. All rights reserved.</p>

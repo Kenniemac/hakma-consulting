@@ -1,187 +1,216 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Hakma Brand Consulting — Home</title>
-  <link rel="stylesheet" href="style.css" />
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Hakma Brand Consulting — Home</title>
+<link rel="stylesheet" href="style.css" />
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="brand-section">
-      <img src="images/hakmalogo.png" alt="Hakma Brand Logo" class="logo"/>
-      <div class="brand-text">
-        <span class="brand-line1">HAKMA</span>
-        <span class="brand-line2">Consulting</span>
-      </div>
-    </div>
-
-    <nav id="navbar">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#offerings">What we do</a>
-      <a href="#values">Blog</a>
-      <a href="#contact">Get in touch</a>
-      <a href="#projects">Projects</a>
-    </nav>
-
-    <div class="menu-toggle" id="menu-toggle">☰</div>
-  </header>
-
-  <!-- HERO SECTION -->
-  <section id="home" class="hero">
-    <img src="images/backgroundimg.png" alt="Brand Strategy" class="hero-image"/>
-    <div class="hero-text">
-      <h2>Building Brands that Connect & Inspire</h2>
-      <p>*Brand Marketing  *Communications     *Customer Experience</p>
-    </div>
-  </section>
-
-<!-- Our Mission Section -->
-<section id="mission" class="mission-section">
-  <div class="mission-content">
-    <h2>OUR MISSION</h2>
-    <p>To help you bring your brand promises to life.</p>
+<!-- HEADER -->
+<header id="home" class="site-header">
+  <div class="brand-section">
+    <img src="images/Hakma.png" alt="Hakma Brand Logo" class="logo"/>
   </div>
+
+  <nav id="navbar">
+    <a href="#home">Home</a>
+    <a href="#about">About Us</a>
+    <a href="#services">Services</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Get in touch</a>
+    <a href="#projects">Projects</a>
+  </nav>
+
+  <div class="menu-toggle" id="menu-toggle">☰</div>
+</header>
+
+
+<!-- ABOUT SECTION -->
+<section id="about" class="about-section">
+  <div class="about-content">
+    <div class="about-image">
+      <img src="images/founder2.jpg" alt="Hakma Brand Consulting">
+    </div>
+
+    <div class="about-text">
+  <h2>About Us</h2>
+
+  <p>
+    Hakma Brand Consulting is a boutique Brand, Marketing Communications and Customer Experience firm. We create tailor made integrated strategies for your brand, to develop a deeper connection with your target audience.
+  </p>
+
+  <p>
+    Attention is currency, and we help you own it. We work with entrepreneurs, professionals, and public figures who are ready to control the narrative, sharpen their presence, and stand out with authority online and offline.
+  </p>
+
+  <p>
+    Your work has earned its place. Our role is to make sure your presence does too, so you’re remembered for the right reasons.
+  </p>
+
+  <p>
+    At Hakma Brand Consulting, we don’t chase visibility; we build influence. Through strategic communication and intentional positioning, we shape perception, protect credibility, and prepare you for the spotlight—so your brand is seen, trusted, and respected where it matters most.
+  </p>
+
+  <p class="about-highlight">
+    <strong>Powerful brands are not accidental.</strong>
+  </p>
+
+  <a href="about.html" class="about-btn">Learn More</a>
+</div>
 </section>
 
 
-  <!-- JS for Mobile Menu -->
-  <script>
-    const menuToggle = document.getElementById('menu-toggle');
-    const navbar = document.getElementById('navbar');
+<!-- SERVICES SECTION (Add Your Content Here) -->
+<section id="services" class="services-preview">
+  <h2>Our Services</h2>
+  <p>
+    Our businesses focus on driving impactful results for you and your business.
+  </p>
 
-    menuToggle.addEventListener('click', () => {
-      navbar.classList.toggle('active');
+  <ul>
+    <li>Brand Strategy & Positioning</li>
+    <li>Communications Strategy</li>
+    <li>Personal Brand Building / Executive Profiling</li>
+    <li>Public Relations (PR) Strategy</li>
+    <li>Go-To-Market Strategy</li>
+    <li>Customer Engagement Strategy</li>
+    <li>Customer Experience Strategy</li>
+    <li>Media & Advertising</li>
+  </ul>
+
+  <!-- ✅ CLICKABLE BUTTON -->
+  <a href="services.html" class="view-more-btn">View More</a>
+</section>
+
+<script>
+  const tabs = document.querySelectorAll(".tab");
+  const cards = document.querySelectorAll(".service-card");
+
+  function activateTab(targetId) {
+    tabs.forEach(t => t.classList.remove("active"));
+    cards.forEach(c => c.classList.remove("active"));
+
+    const tab = document.querySelector(`[data-target="${targetId}"]`);
+    const card = document.getElementById(targetId);
+
+    if (tab && card) {
+      tab.classList.add("active");
+      card.classList.add("active");
+    }
+  }
+
+  tabs.forEach(tab => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.target;
+      activateTab(target);
+      window.location.hash = target;
     });
-  </script>
+  });
 
-</body>
-</html>
-
-
-    <!-- About Us Section -->
-    <section id="about" class="about-section">
-      <div class="about-content">
-        <!-- Left: Text -->
-        <div class="about-text">
-          <h2>About Us</h2>
-          <p>Hakma Brand Consulting is a boutique Brand, Marketing Communications, and Customer Experience firm.</p>
-          <p>At Hakma Brand Consulting, we create tailor-made integrated strategies for your brand, helping you develop a deeper connection with your target market.</p>
-          <p>We design simple, strategic solutions to seemingly complex business challenges.</p>
-        </div>
-    
-        <!-- Right: Image -->
-        <div class="about-image">
-          <img src="images/aboutusupd.jpg" alt="Hakma Consulting Team" />
-        </div>
-      </div>
-    </section>
-    
+  // 🔥 This activates correct tab on page load
+  window.addEventListener("load", () => {
+    const hash = window.location.hash.replace("#", "");
+    if (hash) activateTab(hash);
+  });
+</script>
 
 
-<!-- Offerings Section -->
-<section id="offerings" class="offerings-section">
-  <div class="offerings-header">
-    <h2>What we do</h2>
-    <p>We define, design, and deliver brands that create more valuable relationships between organisations and people.</p>
-  </div>
+<!-- BLOG SECTION -->
 
-  <div class="offerings-grid">
-    <div class="offering-item">Brand Strategy & Positioning</div>
-    <div class="offering-item">Brand Plan Development</div>
-    <div class="offering-item">Go to Market Strategy</div>
-    <div class="offering-item">Product Marketing Strategy</div>
-    <div class="offering-item">Strategic Communications</div>
-    <div class="offering-item">PR Strategy</div>
-    <div class="offering-item">Executive Profiling</div>
-    <div class="offering-item">Customer Engagement Strategy</div>
-    <div class="offering-item">Customer Experience</div>
-  </div>
-</section>
+<!-- PROJECTS SECTION -->
+
+
 
 <section id="contact" class="contact-section">
 
-  <!-- Section Header -->
   <div class="contact-header">
     <h2>Get in Touch</h2>
   </div>
 
-  <!-- Three Columns -->
   <div class="contact-container">
 
-    <!-- Left Image -->
-    <div class="contact-column contact-side">
-      <img src="images/Getintouch.jpg" alt="Hakma Consulting Office" class="contact-image">
-    </div>
+    <!-- LEFT (empty or image later) -->
+    <div class="contact-side"></div>
 
-    <!-- Middle Column: Contact Details -->
-    <div class="contact-column contact-middle">
-      <h2>I'm OMOLOLA MAKINDE</h2>
-      <p class="intro-text">
-        We’d love to hear from you. Let’s collaborate to build meaningful connections between your brand and your customers.
-      </p>
+    <!-- CENTER (your details) -->
+    <div class="contact-middle">
       <div class="contact-info">
-        <p><strong>🌐 Website:</strong> <a href="https://www.hakmaconsulting.com" target="_blank">www.hakmaconsulting.com</a></p>
-        <p><strong>🏢 Office:</strong>Ikoyi, Lagos</p>
-        <p><strong>📧 Email:</strong> <a href="mailto:hello@hakmaconsulting.com">omolola@hakmaconsulting.com</a></p>
-        <p><strong>📷 Instagram:</strong> 
-          <a href="https://instagram.com/hakmaconsulting" target="_blank">@hakmaconsulting</a>
+        <p>Email: 
+          <a href="mailto:hakmaconsulting@gmail.com">hakmaconsulting@gmail.com</a><br>
+          <a href="mailto:lolamakinde01@gmail.com">lolamakinde01@gmail.com</a>
+        </p>
+
+        <p>Phone: 
+          <a href="tel:+2347038998513">+234 703 899 8513</a>
+        </p>
+
+        <p>Address: Ikoyi Lagos</p>
+
+        <p>Instagram: 
+          <a href="https://instagram.com/hakmaconsulting" target="_blank">
+            @hakmaconsulting
+          </a>
         </p>
       </div>
     </div>
 
-    <!-- Right Column: Founder Image -->
-    <div class="contact-column contact-side">
-      <img src="images/founderimg.png" alt="Titi Davies - Founder" class="contact-image">
+    <!-- RIGHT (FORM) -->
+    <div class="contact-side">
+      <div class="contact-form-wrapper">
+
+        <h3 class="form-title">Send a Message</h3>
+        <p class="form-subtext">We’ll get back to you shortly</p>
+
+        <form action="https://formsubmit.co/omolola@hakmaconsulting.com" method="POST">
+          <input type="hidden" name="_captcha" value="false">
+
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" name="name" required>
+          </div>
+
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" name="email" required>
+          </div>
+
+          <div class="form-group">
+            <label>Message</label>
+            <textarea name="message" rows="4" required></textarea>
+          </div>
+
+          <button type="submit" class="submit-btn">Send Message</button>
+        </form>
+
+      </div>
     </div>
 
   </div>
-</section>
 
-<!-- Contact Form Section -->
-<section id="contact-form-section" class="contact-form-section">
-  <form id="contact-form" 
-        action="https://formsubmit.co/omolola@hakmaconsulting.com" 
-        method="POST" 
-        class="contact-form-wrapper">
-
-    <h2 class="form-title">Send Us a Message</h2>
-    <p class="form-subtext">We would love to hear from you. Fill in the form and we will get back to you shortly.</p>
-
-    <!-- FormSubmit Settings -->
-    <input type="hidden" name="_captcha" value="false">
-    <input type="hidden" name="_template" value="table">
-    <input type="hidden" name="_next" value="https://hakmaconsulting.com/thankyou.html">
-
-    <div class="form-group">
-      <label for="name">Full Name</label>
-      <input type="text" id="name" name="name" required>
-    </div>
-
-    <div class="form-group">
-      <label for="email">Email Address</label>
-      <input type="email" id="email" name="email" required>
-    </div>
-
-    <div class="form-group">
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
-    </div>
-
-    <button type="submit" class="submit-btn">Send Message</button>
-  </form>
 </section>
 
 
+<!-- FOOTER -->
+<footer>
+  <p>&copy; 2025 Hakma Brand Consulting. All rights reserved.</p>
+</footer>
 
 
-  <footer id="contact">
-    <p>&copy; 2025 Hakma Brand Consulting. All rights reserved.</p>
-  </footer>
+<!-- SCRIPTS -->
+<script>
+const menuToggle = document.getElementById('menu-toggle');
+const navbar = document.getElementById('navbar');
 
-  <script src="script.js"></script>
+menuToggle.addEventListener('click', () => {
+  navbar.classList.toggle('active');
+});
+</script>
+
+<script src="script.js"></script>
+
 </body>
 </html>

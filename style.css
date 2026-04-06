@@ -812,15 +812,26 @@ html {
    CONTACT INFO
    =============================================== */
 
+/* ===============================================
+   CONTACT SECTION - DARK MODE
+   =============================================== */
+
+.contact-section {
+  background: #000;
+  color: #fff;
+  padding: 3rem 1rem;
+}
+
+/* CONTACT INFO */
 .contact-info p {
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
   margin-bottom: 0.8rem;
-  color: #444;
+  color: #fff;
 }
 
 .contact-info a {
-  color: #000;
+  color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #b79f6e;
   transition: 0.3s ease;
@@ -831,34 +842,33 @@ html {
   border-color: #b79f6e;
 }
 
-/* ===============================================
-   FORM SECTION
-   =============================================== */
-
+/* FORM WRAPPER */
 .contact-form-wrapper {
-  background: #f8f5ef;
+  background: #111;
   padding: 2.5rem;
   border-radius: 14px;
   max-width: 500px;
   width: 100%;
-  box-shadow: 0 5px 25px rgba(0,0,0,0.08);
+  box-shadow: 0 5px 25px rgba(0,0,0,0.5);
 }
 
+/* TITLES */
 .form-title {
   font-family: 'Playfair Display', serif;
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 0.3rem;
-  color: #2a1f12;
+  color: #fff;
 }
 
 .form-subtext {
   text-align: center;
-  color: #555;
+  color: #ccc;
   margin-bottom: 1.5rem;
   font-family: 'Lato', sans-serif;
 }
 
+/* FORM */
 .form-group {
   margin-bottom: 1.2rem;
 }
@@ -867,7 +877,7 @@ html {
   display: block;
   margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #2a1f12;
+  color: #fff;
   font-size: 0.9rem;
 }
 
@@ -876,18 +886,24 @@ html {
   width: 100%;
   padding: 0.7rem;
   border-radius: 8px;
-  border: 1.5px solid #cfc3ae;
+  border: 1.5px solid #555;
   font-family: 'Lato', sans-serif;
   font-size: 0.95rem;
-  background: #fff;
+  background: #000;
+  color: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: #aaa;
 }
 
 /* BUTTON */
 .submit-btn {
   width: 100%;
   padding: 0.9rem;
-  background: #2a1f12;
-  color: #fff;
+  background: #fff;
+  color: #000;
   border: none;
   border-radius: 8px;
   font-size: 1rem;
@@ -897,7 +913,8 @@ html {
 }
 
 .submit-btn:hover {
-  background: #4a3822;
+  background: #b79f6e;
+  color: #000;
 }
 
 /* ===============================================

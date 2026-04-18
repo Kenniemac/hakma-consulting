@@ -37,8 +37,11 @@
 /* MOBILE */
 @media (max-width: 768px) {
   #navbar {
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
     align-items: center;
+    gap: 0.8rem 1.2rem;
   }
 }
 
@@ -199,16 +202,12 @@
 /* === RESPONSIVE === */
 @media (max-width: 768px) {
   nav {
-    display: none;
-    flex-direction: column;
-    background-color: #e3d5b8;
-    position: absolute;
-    top: 80px;
-    right: 20px;
-    width: 200px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.15);
-    padding: 1rem;
+    display: flex;
+    position: static;
+    width: auto;
+    background-color: transparent;
+    box-shadow: none;
+    padding: 0;
   }
 
   nav.active {
@@ -216,7 +215,7 @@
   }
 
   .menu-toggle {
-    display: block;
+    display: none;
   }
 
   .brand-line1 {

@@ -18,7 +18,12 @@
 
   <nav id="navbar">
     <a href="#home">Home</a>
-    <a href="#about">About Us</a>
+    <div class="nav-dropdown">
+      <a href="#about" class="nav-dropdown-toggle">About Us ▾</a>
+      <div class="nav-dropdown-menu">
+        <a href="about.html">Learn More</a>
+      </div>
+    </div>
     <a href="#services">Services</a>
     <a href="#blog">Blog</a>
     <a href="#contact">Get in touch</a>
@@ -58,8 +63,6 @@
   <p class="about-highlight">
     <strong>Powerful brands are not accidental.</strong>
   </p>
-
-  <a href="about.html" class="about-btn">Learn More</a>
 </div>
 </section>
 
@@ -71,16 +74,16 @@
     Our businesses focus on driving impactful results for you and your business.
   </p>
 
-  <ul>
-    <li>Brand Strategy & Positioning</li>
-    <li>Communications Strategy</li>
-    <li>Personal Brand Building / Executive Profiling</li>
-    <li>Public Relations (PR) Strategy</li>
-    <li>Go-To-Market Strategy</li>
-    <li>Customer Engagement Strategy</li>
-    <li>Customer Experience Strategy</li>
-    <li>Media & Advertising</li>
-  </ul>
+  <div class="services-buttons">
+    <button class="service-btn">Brand Strategy & Positioning</button>
+    <button class="service-btn">Communications Strategy</button>
+    <button class="service-btn">Personal Brand Building / Executive Profiling</button>
+    <button class="service-btn">Public Relations (PR) Strategy</button>
+    <button class="service-btn">Go-To-Market Strategy</button>
+    <button class="service-btn">Customer Engagement Strategy</button>
+    <button class="service-btn">Customer Experience Strategy</button>
+    <button class="service-btn">Media & Advertising</button>
+  </div>
 
   <!-- ✅ CLICKABLE BUTTON -->
   <a href="services.html" class="view-more-btn">View More</a>

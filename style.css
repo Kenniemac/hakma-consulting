@@ -229,6 +229,17 @@
 
 
 /* === ABOUT SECTION (Refined Layout) === */
+.landing-image-section {
+  width: 100%;
+  line-height: 0;
+}
+
+.landing-image-section img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
 .about-section {
   background-color: #d6d0c4;   /* dark greyish beige */
   padding: 7rem 8%;
@@ -499,18 +510,22 @@
   flex: 1;
 }
 
-/* Apply SAME typography as mission */
-.founder-text p,
-.founder-text h3 {
+/* Apply matching body typography for founder write-up */
+.founder-text p {
+  font-family: 'Inter', sans-serif;
   font-size: 1.25rem;
   line-height: 1.9;
-  color: #000000;
+  color: #555555;
   font-weight: 400;
   margin-bottom: 1rem;
 }
 
 /* Optional: make role slightly stronger */
 .founder-text h3 {
+  font-family: 'Inter', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.9;
+  color: #000000;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
@@ -1128,6 +1143,48 @@ html {
   text-transform: uppercase;
   color: #777167;
   margin-bottom: 0.3rem;
+}
+
+.instagram-label {
+  display: inline-flex;
+  align-items: center;
+  color: inherit;
+}
+
+.instagram-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  flex-wrap: nowrap;
+}
+
+.instagram-row a {
+  white-space: nowrap;
+}
+
+.instagram-icon {
+  width: 1.2em;
+  height: 1.2em;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.contact-info .instagram-label {
+  color: #ffffff;
+}
+
+.contact-detail .instagram-label {
+  color: #333333;
+}
+
+.contact-detail .instagram-row {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+}
+
+.contact-detail .instagram-row .contact-label {
+  margin-bottom: 0;
 }
 
 .contact-detail a,
